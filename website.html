@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>网站导航 - 宇宙无垠の小窝</title>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://t.mwm.moe/ycy');
+    background-repeat:no-repeat; /* 背景图像将不会在元素内部重复 */
+    background-attachment:fixed; /* 滚动页面时，背景图像不会随之移动 */
+    background-position: center center; /* 背景图像在元素中水平和垂直方向上都居中对齐 */
+    background-size: cover; /* 背景图像将被缩放以完全覆盖整个元素，图像可能被裁剪 */
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+.website-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.website {
+    position: relative;
+    max-width: 800px;
+    margin: 20px; /*方块间的距离*/
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px; /*方块圆角值*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    opacity: 0.8; /*设置透明度*/
+}
+
+    .website {
+    width: 85%;
+}
+.website:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.website p {
+    color: #666;
+    margin: 0;
+}
+.website img {
+    width: 35px; /* 定义图片的宽度*/
+    height: 35px; /* 定义图片的高度*/
+    border-radius: 50%; /* 设置图片圆角为50%*/
+    margin-right: 10px; /* 定义图片与标题之间的间距*/
+    vertical-align: middle; /* 使图片与文字垂直居中对齐*/
+    
+}
+.website h2 {
+    margin: 0; /* 去掉标题的默认外边距*/
+    display: inline-block; /* 使标题与图片在同一行显示*/
+    vertical-align: middle; /* 使标题与图片垂直居中对齐*/
+    
+}
+
+.website .button {
+    display: block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+@media screen and (max-device-width: 400px) {
+    .website .description {
+    margin-bottom: 10px;
+    /* 设置内容与按钮的间距 */
+}
+}
+@media screen and (min-device-width: 400px) {
+    .website .description {
+    margin-bottom: 30px;
+    /* 设置内容与按钮的间距 */
+}
+}
+</style>
+</head>
+<body>
+<h1>宇宙无垠の网站导航</h1>
+<div class="website-container">
+  <div class="website">
+    <img src="https://sr.mihoyo.com/cloud/m/ico/favicon_128.2.1.0.ico" alt="" onerror="this.onerror=null; this.src='https://s2.loli.net/2024/03/06/IShspwBxYy8lKXA.gif';">
+    <h2>云·星穹铁道</h2>
+    <p class="description">云星穹铁道网页版是米哈游（miHoYo）旗下的崩坏：星穹铁道云游戏版本。通过实时云端技术，你无需下载完整星穹铁道包体，也可尽享低延迟、高画质、高帧率游戏体验。</p>
+    <a href="https://sr.mihoyo.com/cloud/" target="_blank" class="button">访问网站</a>
+    <div class="icn"></div>
+  </div>
+  
+  <div class="website">
+    <img src="https://webstatic.mihoyo.com/common/clgm-web-app/ys/ico/favicon_128.4.6.0.ico" alt="" onerror="this.onerror=null; this.src='https://s2.loli.net/2024/03/06/IShspwBxYy8lKXA.gif';">
+    <h2>IMYAI</h2>
+    <p class="description">云原神网页版是米哈游（miHoYo）旗下的原神云游戏版本。通过实时云端技术，你无需下载完整原神包体，也可尽享低延迟、高画质、高帧率游戏体验。</p>
+    <a href="https://ys.mihoyo.com/cloud/" target="_blank" class="button">访问网站</a>
+    <div class="icn"></div>
+  </div>
+  
+  <div class="website">
+    <img src="https://cg.163.com/logo2.png" alt="" onerror="this.onerror=null; this.src='https://s2.loli.net/2024/03/06/IShspwBxYy8lKXA.gif';">
+    <h2>IMYAI</h2>
+    <p class="description">网易云游戏是网易游戏官方推出的云游戏平台，兼容性高，画面渲染能力强，低配手机电脑也能流畅运行不掉帧不卡顿，可享受随时玩游戏的乐趣！</p>
+    <a href="https://cg.163.com/" target="_blank" class="button">访问网站</a>
+    <div class="icn"></div>
+  </div>
+  
+  <div class="website">
+    <img src="https://www.migufun.com/middleh5/migu_icon.png" alt="" onerror="this.onerror=null; this.src='https://s2.loli.net/2024/03/06/IShspwBxYy8lKXA.gif';">
+    <h2>咪咕快游</h2>
+    <p class="description">咪咕快游（MiguPlay）是一个手机、电脑、电视机顶盒三端互通的云游戏平台。玩家可免费畅玩海量精品游戏，千余款3A主机/PC大作及高品质手游免下载免安装，即点即玩。</p>
+    <a href="https://www.migufun.com" target="_blank" class="button">访问网站</a>
+    <div class="icn"></div>
+  </div>
+</div>
+</body>
+</html>

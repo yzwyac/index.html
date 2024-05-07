@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>宇宙无垠の小窝</title>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0; /* 重置默认的外边距 */
+    padding: 0; /* 重置默认的内边距 */
+    background-color: #f4f4f4; /* 设置背景颜色 */
+    text-align: center; /* 文字居中对齐 */
+  }
+
+  .container {
+    max-width: 800px; /* 最大宽度 */
+    margin: 0 auto; /* 自动外边距，实现居中 */
+    padding: 0 20px; /* 容器内边距，左右20px */
+  }
+
+  .avatar {
+    width: 150px; /* 头像宽度 */
+    height: 150px; /* 头像高度 */
+    border-radius: 50%; /* 头像圆角 */
+    margin: 20px auto; /* 头像外边距，上下20px，左右自动 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 头像阴影效果 */
+    transition: transform 1s ease; /* 设置过渡效果，持续1秒，使用ease缓动函数 */
+  }
+  
+  .avatar:hover {
+  transform: rotate(360deg); /* 鼠标悬停时旋转360度 */
+  }
+
+  .username {
+    font-size: 24px; /* 用户名大小 */
+    color: #333; /* 用户名颜色 */
+    margin: 10px 0; /* 用户名外边距，上下10px，左右0 */
+  }
+
+  .signature {
+    font-size: 16px; /* 签名大小 */
+    color: #666; /* 签名颜色 */
+    margin: 10px 0; /* 签名外边距，上下10px，左右0 */
+  }
+
+  .button-container {
+    margin: 20px 0; /* 按钮容器外边距，上下20px，左右0 */
+  }
+
+  .button {
+    padding: 10px 20px;
+    border: 2px solid #06a2f4;
+    background-color: white;
+    color: #06a2f4;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .button:hover {
+    background-color: #18afff;
+    color: white;
+  }
+
+  .hitokoto {
+    font-size: 16px; /* 一言大小 */
+    color: #333; /* 一言颜色 */
+    margin: 20px 0; /* 一言外边距，上下20px，左右0 */
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 10px;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /* 响应式设计 */
+  @media (max-width: 330px) {
+    .container {
+      padding: 0 10px; /* 小屏幕下的容器内边距调整 */
+    }
+
+    .avatar {
+      width: 100px; /* 小屏幕下的头像大小调整 */
+      height: 100px; /* 小屏幕下的头像大小调整 */
+      margin: 10px auto; /* 小屏幕下的头像外边距调整 */
+    }
+
+    .username, .signature, .hitokoto, .section {
+      font-size: 16px; /* 小屏幕下的文字大小调整 */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="avatar.png" alt="头像" onerror="this.onerror=null; this.src='https://s21.ax1x.com/2024/05/01/pkFz9ne.png';" class="avatar">
+  <div class="username">宇宙无垠</div>
+  <div class="signature">我们的征途是星辰大海，我们的探索永无止境！</div>
+  
+  <div class="button-container">
+    <a href="website.html" class="button">网站导航</a>
+    <a href="blog.html" class="button">个人博客</a>
+  </div>
+
+<section>
+<footer>
+<i><div id="hitokoto"></div></i>
+<p style="text-align:center;">本站已正常运行 <span id="uptime"></span></p>
+<script>
+function updateUptime() {
+    var startTime = new Date("2023-04-29T14:35:36Z");
+    var now = new Date();
+    var uptime = now - startTime;
+    var days = Math.floor(uptime / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((uptime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((uptime % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((uptime % (1000 * 60)) / 1000);
+    document.getElementById("uptime")
+        .innerHTML = days + "天" + hours + "时" + minutes + "分" + seconds + "秒";
+}
+setInterval(updateUptime, 1000);
+</script>
+<script>
+fetch('https://v1.hitokoto.cn/?c=a&c=b&c=c&c=d&c=h&c=i&c=j&c=k')
+    .then(response => response.json())
+    .then(data => {
+    const hitokoto = document.getElementById('hitokoto');
+    hitokoto.innerHTML = data.hitokoto;
+})
+    .
+catch (() => {
+    const hitokoto = document.getElementById('hitokoto');
+    hitokoto.innerHTML = '海内存知己，天涯若比邻';
+});
+</script>
+</footer>
+</section>
+<!-- 目前还有个问题，@media无法改变footer（或者说section）里的字体大小 -->
+</body>
+</html>
