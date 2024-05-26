@@ -8,9 +8,13 @@
 <style>
   body {
     margin: 0; /* 重置默认的外边距 */
-    padding: 0; /* 重置默认的内边距 */
-    background-color: #f4f4f4; /* 设置背景颜色 */
+    padding: 0; /* 重置默认的内边距 */    
     text-align: center; /* 文字居中对齐 */
+    background-image: url('nya.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position: center center;
+    background-size: cover;
   }
 
   .container {
@@ -42,6 +46,19 @@
     font-size: 16px; /* 签名大小 */
     color: #666; /* 签名颜色 */
     margin: 10px 0; /* 签名外边距，上下10px，左右0 */
+    background-image:-webkit-linear-gradient(left,#12c2e9 0%,#c471ed 25%,#f64f59 50%,#33ca2b 75%,#12c2e9 100%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+    -webkit-background-size:200% 100%;
+    -webkit-animation:masked-animation 5s forwards linear infinite;
+  }
+  @-webkit-keyframes masked-animation {
+    from {
+    background-position:0 0;
+  }
+  to{
+    background-position:-200% 0;
+  }
   }
 
   .button-container {
@@ -72,18 +89,19 @@
   .hitokoto {
     font-size: 16px; /* 一言大小 */
     color: #333; /* 一言颜色 */
-    margin: 20px 0; /* 一言外边距，上下20px，左右0 */
+    margin: 10px 0; /* 一言外边距，上下10px，左右0 */
   }
-  
+
   footer {
     position: absolute;
     bottom: 10px;
-}
-section {
+  }
+
+  section {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
   /* 响应式设计 */
   @media (max-width: 330px) {
@@ -118,7 +136,7 @@ section {
 <section>
 <footer>
 <i><div id="hitokoto"></div></i>
-<p style="text-align:center;">本站已正常运行 <span id="uptime"></span></p>
+<p>本站已正常运行 <span id="uptime"></span></p>
 <script>
 function updateUptime() {
     var startTime = new Date("2023-04-29T14:35:36Z");
